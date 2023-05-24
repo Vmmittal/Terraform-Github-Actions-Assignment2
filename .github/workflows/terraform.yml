@@ -11,10 +11,10 @@ on:
 permissions:
   contents: read
 
-env:
-   AWS_ACCESS_KEY_ID     : ${{ secrets.AWS_ACCESS_KEY_ID }}
-   AWS_SECRET_ACCESS_KEY : ${{ secrets.AWS_ACCESS_KEY_ID }}
-   AWS_SESSION_TOKEN     : ${{ secrets.AWS_SESSION_TOKEN}}
+# env:
+#    AWS_ACCESS_KEY_ID     : ${{ secrets.AWS_ACCESS_KEY_ID }}
+#    AWS_SECRET_ACCESS_KEY : ${{ secrets.AWS_ACCESS_KEY_ID }}
+#    AWS_SESSION_TOKEN     : ${{ secrets.AWS_SESSION_TOKEN}}
 
 jobs:
   terraform:
@@ -38,6 +38,7 @@ jobs:
          aws-access-key-id :  ${{ secrets.AWS_ACCESS_KEY_ID }}
          aws-secret-access-key : ${{ secrets.AWS_SECRET_ACCESS_KEY }}
          aws-session-token :     ${{ secrets.AWS_SESSION_TOKEN }}
+         aws-region : us-east-1
 
 
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
