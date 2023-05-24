@@ -16,7 +16,7 @@ terraform {
 resource "aws_instance" "web" {
   ami           = "ami-0889a44b331db0194"
   instance_type = "t2.micro"
-  subnet_id = "subnet-0ee633ea9e4e4fb04" 
+  subnet_id = "subnet-02fd86ec22e3fac87" 
   tags = {
     Name = "My-ec2-github"
     Owner="vipul.kumar@cloudeq.com"
