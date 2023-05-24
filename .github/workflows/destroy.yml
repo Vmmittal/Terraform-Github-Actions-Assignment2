@@ -12,7 +12,7 @@ permissions:
 
 
 jobs:
-  terraform-destroy:
+  destroy:
     name: 'Terraform destroy'
     runs-on: ubuntu-latest
     environment: production
