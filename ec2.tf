@@ -3,6 +3,16 @@ provider "aws" {
   
 }
 
+
+terraform {
+  backend "s3" {
+    bucket = "mybucket-1410"
+    key    = "vipul.tfstate"
+    region = "us-east-1"
+  }
+}
+
+
 resource "aws_instance" "web" {
   ami           = "ami-0889a44b331db0194"
   instance_type = "t2.micro"
