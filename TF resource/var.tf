@@ -3,6 +3,6 @@ variable "ec2_tags" {
   default = {
     Name = "My-ec2-github"
     Owner="vipul.kumar@cloudeq.com"
-    purpose="training"
+    purpose="training-1"
   }
 }
