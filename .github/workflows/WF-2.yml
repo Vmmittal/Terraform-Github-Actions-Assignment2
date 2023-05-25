@@ -9,7 +9,10 @@ jobs:
   destroy:
     name: 'Terraform-destroy'
     runs-on: ubuntu-latest
-    
+    env:
+      working-directory: ./EC2
+
+
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     defaults:
       run:
@@ -36,8 +39,10 @@ jobs:
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
       run: terraform init
+      working-directory: ${{env.working-directory}}
 
 
     - name: Terraform destroy
       run: terraform destroy -auto-approve  
+      working-directory: ${{env.working-directory}}
 
