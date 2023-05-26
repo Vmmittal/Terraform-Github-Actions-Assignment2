@@ -11,6 +11,11 @@ on:
          - production
          - dev
          - ubuntu-server
+     notify:
+      description: "Want to notify "
+      required : true
+      type : boolean
+      default: false
 jobs:
   build:
     runs-on: ubuntu-latest
