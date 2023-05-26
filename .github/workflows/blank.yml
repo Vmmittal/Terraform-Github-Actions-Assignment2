@@ -6,6 +6,11 @@ on:
         description: " Enter the environment"
         required : true
         default : 'production'
+        type: choice
+        options:
+         - production
+         - dev
+         - ubuntu-server
 jobs:
   build:
     runs-on: ubuntu-latest
